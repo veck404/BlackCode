@@ -22,7 +22,7 @@ export default function CreatorSection() {
             <div className="relative bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
               <div className="aspect-w-1 aspect-h-1 mb-6">
                 <img
-                  src="../../../public/assets/profile.jpeg"
+                  src="https://ibb.co/nqSZK5cy"
                   alt="Vector"
                   className="w-48 h-48 rounded-3xl mx-auto object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300"
                 />
