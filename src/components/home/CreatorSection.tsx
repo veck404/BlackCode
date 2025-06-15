@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Globe } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 
 export default function CreatorSection() {
   return (
@@ -22,37 +22,37 @@ export default function CreatorSection() {
             <div className="relative bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
               <div className="aspect-w-1 aspect-h-1 mb-6">
                 <img
-                  src="https://i.ibb.co/fxHpNCX/deepak-modi.jpg"
+                  src="../../../public/assets/profile.jpeg"
                   alt="Vector"
                   className="w-48 h-48 rounded-3xl mx-auto object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  Deepak Modi
+                  Victor Umaru
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                  Full Stack Developer & DSA Enthusiast
+                  Front-end Developer & DSA Enthusiast
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href="https://github.com/decodewithdeepak"
+                    href="/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
                   >
                     <Github className="w-6 h-6" />
                   </a>
-                  <a
-                    href="https://www.linkedin.com/in/deepakmodi1/"
+                  {/* <a
+                    // href="https://www.linkedin.com/in/deepakmodi1/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
                   >
                     <Linkedin className="w-6 h-6" />
-                  </a>
+                  </a> */}
                   <a
-                    href="https://deepakmodi.vercel.app/"
+                    href="https://vector404.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors space-x-2"
@@ -74,10 +74,10 @@ export default function CreatorSection() {
                   About Me
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  Hi, I'm Deepak Modi, a passionate developer with a deep love
-                  for Data Structures and Algorithms. Through BlackCode, I aim
-                  to create a comprehensive platform that makes DSA learning
-                  accessible, structured, and enjoyable for everyone.
+                  A software developer committed to delivering high-quality
+                  product , always learning new technologies to improve my
+                  skills Love collaborating with designers and developers and
+                  Committed to delivering high-quality software solutions.
                 </p>
                 <div className="space-y-4">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
