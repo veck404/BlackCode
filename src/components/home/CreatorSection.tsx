@@ -23,7 +23,7 @@ export default function CreatorSection() {
               <div className="aspect-w-1 aspect-h-1 mb-6">
                 <img
                   src="https://i.ibb.co/fxHpNCX/deepak-modi.jpg"
-                  alt="Deepak Modi"
+                  alt="Vector"
                   className="w-48 h-48 rounded-3xl mx-auto object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
