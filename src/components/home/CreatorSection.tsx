@@ -32,7 +32,7 @@ export default function CreatorSection() {
                   Victor Umaru
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                  Front-end Developer & DSA Enthusiast
+                  Web Developer & DSA Enthusiast
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
@@ -79,7 +79,7 @@ export default function CreatorSection() {
                   skills Love collaborating with designers and developers and
                   Committed to delivering high-quality software solutions.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
                     My Mission
                   </h4>
