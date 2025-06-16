@@ -22,7 +22,7 @@ export default function CreatorSection() {
             <div className="relative bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
               <div className="aspect-w-1 aspect-h-1 mb-6">
                 <img
-                  src="https://ibb.co/nqSZK5cy"
+                  src="../../../public/assets/profile.jpeg"
                   alt="Vector"
                   className="w-48 h-48 rounded-3xl mx-auto object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300"
                 />
@@ -58,7 +58,7 @@ export default function CreatorSection() {
                     className="flex items-center p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors space-x-2"
                   >
                     <Globe className="w-6 h-6" />
-                    <span>Visit My Portfolio</span>
+                    <span>Read My Portfolio</span>
                   </a>
                 </div>
               </div>
