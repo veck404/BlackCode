@@ -79,7 +79,7 @@ export default function CreatorSection() {
                   skills Love collaborating with designers and developers and
                   Committed to delivering high-quality software solutions.
                 </p>
-                <div className="space-y-6">
+                <div className="space-y-7">
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
                     My Mission
                   </h4>
