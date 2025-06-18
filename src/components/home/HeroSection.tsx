@@ -12,7 +12,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 mb-6">
               <span className="animate-pulse mr-2">🔥</span>
               <span className="text-sm font-medium">
-                The Ultimate DSA Learning Platform
+                The Ultimate DSA Learning Platform you need
               </span>
             </div>
 
