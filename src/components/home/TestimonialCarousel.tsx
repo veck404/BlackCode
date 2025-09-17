@@ -103,7 +103,7 @@ export default function TestimonialCarousel({
             onTransitionEnd={handleTransitionEnd}
           >
             {loopTestimonials.map((testimonial, index) => (
-              <div[]
+              <div
                 key={`testimonial-${index}`}
                 className="flex-shrink-0 px-2 py-2"
                 style={{
