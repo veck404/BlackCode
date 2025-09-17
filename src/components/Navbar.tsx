@@ -19,7 +19,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center space-x-2">
               <Code2 className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
               <span className="text-xl font-bold text-gray-900 dark:text-white">
-                BlackCode.
+                BlackCode
               </span>
             </Link>
           </div>
@@ -76,7 +76,7 @@ export default function Navbar() {
               <UserMenu />
             ) : (
               <Link
-                to="/login"
+                to="/loging"
                 className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
               >
                 Login
