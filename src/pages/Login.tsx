@@ -30,7 +30,7 @@ export default function Login() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-3 rounded-2xl shadow-lg">
-              <Code2 className="h-8 w-8 text-grey-100" />
+              <Code2 className="h-8 w-8 text-white" />
             </div>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
