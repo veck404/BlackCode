@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import React, { useEffect, useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import React, { useEffect, useState, useRef } from "react";
 
 interface Testimonial {
   content: string;
@@ -13,7 +13,9 @@ interface TestimonialCarouselProps {
   testimonials: Testimonial[];
 }
 
-export default function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
+export default function TestimonialCarousel({
+  testimonials,
+}: TestimonialCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [slidesToShow, setSlidesToShow] = useState(1); // Default for mobile
@@ -34,8 +36,8 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
       setSlidesToShow(window.innerWidth < 768 ? 1 : 3); // 1 on small screens, 3 on larger screens
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Next slide handler
@@ -92,7 +94,9 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
         {/* Testimonial Slider */}
         <div className="overflow-hidden w-full">
           <div
-            className={`flex transition-transform duration-500 ease-in-out ${isTransitioning ? '' : 'transition-none'}`}
+            className={`flex transition-transform duration-500 ease-in-out ${
+              isTransitioning ? "" : "transition-none"
+            }`}
             style={{
               transform: `translateX(${translateX}%)`,
             }}
@@ -129,7 +133,11 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-4 w-4 ${i < testimonial.rating ? 'fill-current' : 'stroke-current'}`}
+                        className={`h-4 w-4 ${
+                          i < testimonial.rating
+                            ? "fill-current"
+                            : "stroke-current"
+                        }`}
                       />
                     ))}
                   </div>
@@ -155,18 +163,18 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${activeDotIndex === index
-              ? 'bg-white border-indigo-600 shadow-lg scale-125 ring-2 ring-indigo-300'
-              : 'bg-gray-200 border-gray-400 opacity-80 hover:opacity-100'
-              }`}
+            className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${
+              activeDotIndex === index
+                ? "bg-white border-indigo-600 shadow-lg scale-125 ring-2 ring-indigo-300"
+                : "bg-gray-200 border-gray-400 opacity-80 hover:opacity-100"
+            }`}
             aria-label={`Go to testimonial ${index + 1}`}
             style={{
-              marginBottom: '0.5rem',  // Add more space below the dot
+              marginBottom: "0.5rem", // Add more space below the dot
             }}
           />
         ))}
       </div>
-
     </div>
   );
 }
