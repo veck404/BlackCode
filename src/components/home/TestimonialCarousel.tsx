@@ -110,7 +110,7 @@ export default function TestimonialCarousel({
                   width: `${100 / slidesToShow}%`,
                 }}
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl h-full">
+                <div className="white dark:bg-gray-800 p-6 rounded-xl shadow-xl h-full">
                   <div className="flex items-center mb-4">
                     <img
                       className="h-12 w-12 rounded-full object-cover"
