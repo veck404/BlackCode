@@ -61,7 +61,7 @@ export default function Navbar() {
                     isDark ? "opacity-0" : "opacity-100"
                   }`}
                 >
-                  <Sun className="w-5 h-5 text-yellow-50" />
+                  <Sun className="w-5 h-5 text-yellow-500" />
                 </span>
                 <span
                   className={`absolute inset-0 transform transition-transform duration-500 rotate-90 dark:rotate-0 ${
