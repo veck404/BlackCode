@@ -68,7 +68,7 @@ export default function Navbar() {
                     isDark ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <Moon className="w-5 h-5 text-blue-500" />
+                  <Moon className="w-5 h-5 text-blue-50" />
                 </span>
               </div>
             </button>
