@@ -52,7 +52,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={toggleTheme}
-              className="relative p-2 rounded-lg bg-gray-10 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+              className="relative p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
               aria-label="Toggle theme"
             >
               <div className="relative w-5 h-5">
