@@ -144,7 +144,7 @@ export default function TestimonialCarousel({
                 </div>
               </div>
             ))}
-          </div>
+          </div
         </div>
 
         {/* Next Button */}
