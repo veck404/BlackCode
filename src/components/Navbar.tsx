@@ -57,7 +57,7 @@ export default function Navbar() {
             >
               <div className="relative w-5 h-5">
                 <span
-                  className={`absolute inset-0 transform transition-transform duration-500 rotate-0 dark:-rotate-90 ${
+                  className={`abste inset-0 transform transition-transform duration-500 rotate-0 dark:-rotate-90 ${
                     isDark ? "opacity-0" : "opacity-100"
                   }`}
                 >
