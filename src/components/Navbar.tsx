@@ -19,7 +19,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center space-x-2">
               <Code2 className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
               <span className="text-xl font-bold text-gray-900 dark:text-white">
-                BlackCode
+                BlackCode.
               </span>
             </Link>
           </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
             >
               <div className="relative w-5 h-5">
                 <span
-                  className={`abste inset-0 transform transition-transform duration-500 rotate-0 dark:-rotate-90 ${
+                  className={`absolute inset-0 transform transition-transform duration-500 rotate-0 dark:-rotate-90 ${
                     isDark ? "opacity-0" : "opacity-100"
                   }`}
                 >
