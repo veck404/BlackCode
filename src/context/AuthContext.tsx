@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from "react";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -48,7 +48,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return unsubscribe;
   }, [navigate]);
 
-  const loginWithGoogle = async () => {
+  const loginWithGoogle = useCallback(async () => {
     try {
       // First try popup
       try {
@@ -71,9 +71,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       toast.error(error.message || "Failed to sign in with Google");
       throw error;
     }
-  };
+  }, [navigate]);
 
-  const logout = async () => {
+  const logout = useCallback(async () => {
     try {
       await signOut(auth);
       toast.success("Logged out successfully");
@@ -82,10 +82,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       toast.error("Failed to log out");
       throw error;
     }
-  };
+  }, [navigate]);
+
+  const value = useMemo(
+    () => ({
+      user,
+      loading,
+      loginWithGoogle,
+      logout,
+    }),
+    [loading, loginWithGoogle, logout, user]
+  );
 
   return (
-    <AuthContext.Provider value={{ user, loading, loginWithGoogle, logout }}>
+    <AuthContext.Provider value={value}>
       {!loading && children}
     </AuthContext.Provider>
   );
