@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Globe } from "lucide-react";
+import { Github, Globe, Linkedin } from "lucide-react";
 
 export default function CreatorSection() {
   return (
@@ -22,7 +22,7 @@ export default function CreatorSection() {
             <div className="relative bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
               <div className="aspect-w-1 aspect-h-1 mb-6">
                 <img
-                  src="../../../public/assets/profile.jpeg"
+                  src="@/profile.jpeg"
                   alt="Vector"
                   loading="lazy"
                   decoding="async"
@@ -38,21 +38,21 @@ export default function CreatorSection() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href="/"
+                    href="github.com/veck404"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
                   >
                     <Github className="w-6 h-6" />
                   </a>
-                  {/* <a
-                    // href="https://www.linkedin.com/in/deepakmodi1/"
+                  <a
+                    // href="https://www.linkedin.com/in/veck404/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
                   >
                     <Linkedin className="w-6 h-6" />
-                  </a> */}
+                  </a>
                   <a
                     href="https://vector404.vercel.app/"
                     target="_blank"
