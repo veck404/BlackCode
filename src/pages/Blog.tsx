@@ -56,6 +56,8 @@ export default function Blog() {
           <img
             src={blogPosts[0].image}
             alt={blogPosts[0].title}
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
@@ -89,6 +91,8 @@ export default function Blog() {
               <img
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>

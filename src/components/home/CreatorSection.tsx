@@ -24,6 +24,8 @@ export default function CreatorSection() {
                 <img
                   src="../../../public/assets/profile.jpeg"
                   alt="Vector"
+                  loading="lazy"
+                  decoding="async"
                   className="w-48 h-48 rounded-3xl mx-auto object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
