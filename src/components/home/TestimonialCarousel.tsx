@@ -117,6 +117,8 @@ export default function TestimonialCarousel({
                       className="h-12 w-12 rounded-full object-cover"
                       src={testimonial.avatar}
                       alt={testimonial.author}
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

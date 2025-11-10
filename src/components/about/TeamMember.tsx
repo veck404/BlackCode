@@ -26,6 +26,8 @@ export default function TeamMember({
           <img
             src={image}
             alt={name}
+            loading="lazy"
+            decoding="async"
             className="w-32 h-32 rounded-full mx-auto object-cover"
           />
         </div>
