@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 interface Testimonial {
   content: string;
@@ -19,16 +19,17 @@ export default function TestimonialCarousel({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [slidesToShow, setSlidesToShow] = useState(1); // Default for mobile
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   const totalSlides = testimonials.length;
 
   // Looping testimonials for seamless effect
-  const loopTestimonials = [
-    ...testimonials.slice(-slidesToShow), // Clone last few slides
-    ...testimonials,
-    ...testimonials.slice(0, slidesToShow), // Clone first few slides
-  ];
+  const loopTestimonials = useMemo(() => {
+    const safeSlidesToShow = Math.min(slidesToShow, totalSlides);
+    return [
+      ...testimonials.slice(-safeSlidesToShow), // Clone last few slides
+      ...testimonials,
+      ...testimonials.slice(0, safeSlidesToShow), // Clone first few slides
+    ];
+  }, [slidesToShow, testimonials, totalSlides]);
 
   // Handle responsive slidesToShow
   useEffect(() => {
