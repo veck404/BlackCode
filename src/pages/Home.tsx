@@ -42,6 +42,8 @@ export default function Home() {
               <img
                 src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
                 alt="Background"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-20"
               />
             </div>
