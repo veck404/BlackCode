@@ -33,6 +33,8 @@ export default function UserMenu() {
         <img
           src={user.photoURL || ''}
           alt={user.displayName || 'User'}
+          loading="lazy"
+          decoding="async"
           className="h-8 w-8 rounded-full ring-2 ring-white dark:ring-gray-800"
         />
       </button>
