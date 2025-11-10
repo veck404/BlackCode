@@ -13,7 +13,7 @@ const DIFFICULTY_COLORS = {
   Hard: 'text-red-600 dark:text-red-400',
 };
 
-export default function ProblemList({ problems, onToggle }: ProblemListProps) {
+function ProblemList({ problems, onToggle }: ProblemListProps) {
   return (
     <div className="border-t border-gray-200 dark:border-gray-700">
       {problems.map((problem) => (
@@ -63,3 +63,5 @@ export default function ProblemList({ problems, onToggle }: ProblemListProps) {
     </div>
   );
 }
+
+export default React.memo(ProblemList);

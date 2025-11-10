@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useDeferredValue, useMemo, useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import { topics } from '../data/problems';
 import TopicCard from '../components/sheet/TopicCard';
@@ -12,18 +12,38 @@ export default function Sheet() {
     console.log('Toggled problem:', problemId);
   };
 
-  const filteredTopics = topics.map(topic => ({
-    ...topic,
-    problems: topic.problems.filter(problem => {
-      const matchesSearch = problem.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-      const matchesDifficulty =
-        selectedDifficulty === 'all' ||
-        problem.difficulty.toLowerCase() === selectedDifficulty.toLowerCase();
-      return matchesSearch && matchesDifficulty;
-    }),
-  }));
+  const deferredSearch = useDeferredValue(searchQuery);
+  const deferredDifficulty = useDeferredValue(selectedDifficulty);
+
+  const filteredTopics = useMemo(() => {
+    const normalizedQuery = deferredSearch.trim().toLowerCase();
+    const normalizedDifficulty = deferredDifficulty.toLowerCase();
+
+    return topics.map((topic) => {
+      if (!normalizedQuery && normalizedDifficulty === 'all') {
+        return topic;
+      }
+
+      const filteredProblems = topic.problems.filter((problem) => {
+        const matchesSearch = normalizedQuery
+          ? problem.title.toLowerCase().includes(normalizedQuery)
+          : true;
+        const matchesDifficulty =
+          normalizedDifficulty === 'all' ||
+          problem.difficulty.toLowerCase() === normalizedDifficulty;
+        return matchesSearch && matchesDifficulty;
+      });
+
+      if (filteredProblems.length === topic.problems.length) {
+        return topic;
+      }
+
+      return {
+        ...topic,
+        problems: filteredProblems,
+      };
+    });
+  }, [deferredDifficulty, deferredSearch]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
