@@ -13,7 +13,7 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { topics, problems } from '../data/problems';
+import { problems } from '../data/problems';
 import StatsCard from '../components/dashboard/StatsCard';
 import ActivityChart from '../components/dashboard/ActivityChart';
 import DifficultyChart from '../components/dashboard/DifficultyChart';
@@ -60,11 +60,18 @@ const recentSubmissions = [
   },
 ] as const;
 
+const totalProblemsCount = problems.length;
+const completedProblemsCount = problems.reduce(
+  (count, problem) => count + (problem.completed ? 1 : 0),
+  0
+);
+const completionRatePercent =
+  totalProblemsCount === 0
+    ? 0
+    : Math.round((completedProblemsCount / totalProblemsCount) * 100);
+
 export default function Dashboard() {
   const { user } = useAuth();
-  const totalProblems = problems.length;
-  const completedProblems = problems.filter(p => p.completed).length;
-  const completionRate = Math.round((completedProblems / totalProblems) * 100);
   const currentStreak = 7; // This would come from user's data
 
   return (
@@ -83,11 +90,11 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <StatsCard
           title="Problems Solved"
-          value={completedProblems}
-          subtext={`/${totalProblems}`}
+          value={completedProblemsCount}
+          subtext={`/${totalProblemsCount}`}
           icon={Target}
           iconColor="text-indigo-600 dark:text-indigo-400"
-          progress={completionRate}
+          progress={completionRatePercent}
         />
         <StatsCard
           title="Current Streak"
@@ -97,7 +104,7 @@ export default function Dashboard() {
         />
         <StatsCard
           title="Completion Rate"
-          value={`${completionRate}%`}
+          value={`${completionRatePercent}%`}
           icon={Activity}
           iconColor="text-purple-600 dark:text-purple-400"
         />
