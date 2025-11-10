@@ -128,6 +128,8 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                 alt="Team collaboration"
+                loading="lazy"
+                decoding="async"
                 className="relative rounded-lg shadow-lg object-cover w-full h-full"
               />
             </div>
